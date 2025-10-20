@@ -10,5 +10,9 @@ public class Main {
         for(int digit : calculator.multipliedArray(number1, 9)){
             System.out.print(digit + " ");
         }
+        System.out.println();
+        for(int digit : calculator.differenceArrays(number1, number2)){
+            System.out.print(digit + " ");
+        }
     }
 }
