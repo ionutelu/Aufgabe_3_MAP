@@ -12,4 +12,17 @@ public class Calculator {
 
         return result;
     }
+
+    public int[] multipliedArray(int[] array1, int digit) {
+        int[] result = new int[array1.length + 1];
+        result[0] = 0;
+        for(int i = 0; i < array1.length; i++){
+            result[i+1] = array1[i] * digit;
+        }
+        for(int j = array1.length; j > 0; j--){
+            result[j-1] = result[j - 1] + result[j] / 10;
+            result[j] = result[j] % 10;
+        }
+        return result;
+    }
 }
