@@ -35,4 +35,14 @@ public class Calculator {
         }
         return result;
     }
+
+    public int[] divideArray(int[] array1, int digit) {
+        int[] result = new int[array1.length];
+        for(int i = 0; i < array1.length - 1; i++){
+            result[i] = array1[i] / digit;
+            array1[i+1] = array1[i+1] + (array1[i] % digit) * 10;
+        }
+        result[array1.length - 1] = array1[array1.length - 1] / digit;
+        return result;
+    }
 }
